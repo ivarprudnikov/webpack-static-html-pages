@@ -10,13 +10,9 @@
         content="width=device-width,user-scalable=0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contacts.html">Contacts</a></li>
-    </ul>
-  </nav>
+
+  <%= require('html-loader!../partials/nav.html') %>
+
   <h1 class="page-title">CONTACTS</h1>
 </body>
 </html>
