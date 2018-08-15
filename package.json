@@ -1,0 +1,13 @@
+{
+  "name": "webpack-static-html-pages",
+  "version": "1.0.0",
+  "description": "Example of a static website assembled by using webpack v4",
+  "keywords": [
+    "webpack",
+    "static",
+    "starter",
+    "html",
+    "pages"
+  ],
+  "license": "MIT"
+}
