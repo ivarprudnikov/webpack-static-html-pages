@@ -1,11 +1,18 @@
 const path = require('path');
+
+const CleanWebpackPlugin = require('clean-webpack-plugin'); //installed via npm
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+
+const buildPath = path.resolve(__dirname, 'dist');
 
 module.exports = {
 
   // This option controls if and how source maps are generated.
   // https://webpack.js.org/configuration/devtool/
-  devtool: 'eval-cheap-module-source-map',
+  devtool: 'source-map',
 
   // https://webpack.js.org/concepts/entry-points/#multi-page-application
   entry: {
@@ -14,10 +21,11 @@ module.exports = {
     contacts: './src/page-contacts/main.js'
   },
 
-  // https://webpack.js.org/configuration/dev-server/
-  devServer: {
-    port: 8080,
-    contentBase: path.join(__dirname, "dist")
+  // how to write the compiled files to disk
+  // https://webpack.js.org/concepts/output/
+  output: {
+    filename: '[name].[hash:20].js',
+    path: buildPath
   },
 
   // https://webpack.js.org/concepts/loaders/
@@ -34,9 +42,8 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          "style-loader",
+          MiniCssExtractPlugin.loader,
           "css-loader"
-          // Please note we are not running postcss here
         ]
       },
       {
@@ -46,35 +53,51 @@ module.exports = {
           {
             loader: 'url-loader',
             options: {
-              // On development we want to see where the file is coming from, hence we preserve the [path]
-              name: '[path][name].[ext]?hash=[hash:20]',
+              name: '[name].[hash:20].[ext]',
               limit: 8192
             }
           }
         ]
       }
-    ],
+    ]
   },
 
   // https://webpack.js.org/concepts/plugins/
   plugins: [
+    new CleanWebpackPlugin(buildPath),
     new HtmlWebpackPlugin({
       template: './src/page-index/tmpl.html',
-      inject: true,
+      inject: 'body',
       chunks: ['index'],
       filename: 'index.html'
     }),
     new HtmlWebpackPlugin({
       template: './src/page-about/tmpl.html',
-      inject: true,
+      inject: 'body',
       chunks: ['about'],
       filename: 'about.html'
     }),
     new HtmlWebpackPlugin({
       template: './src/page-contacts/tmpl.html',
-      inject: true,
+      inject: 'body',
       chunks: ['contacts'],
       filename: 'contacts.html'
+    }),
+    new MiniCssExtractPlugin({
+      filename: "[name].[contenthash].css",
+      chunkFilename: "[id].[contenthash].css"
     })
-  ]
+  ],
+
+  // https://webpack.js.org/configuration/optimization/
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        sourceMap: true
+      }),
+      new OptimizeCssAssetsPlugin({})
+    ]
+  },
 };
