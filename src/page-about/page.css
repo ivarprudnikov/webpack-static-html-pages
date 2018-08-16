@@ -1,6 +1,9 @@
 body {
   background-color: darkslategrey;
 }
+nav {
+  background-color: #8d0085;
+}
 .page-title {
-  color: darkblue
+  color: #1c1c2a
 }

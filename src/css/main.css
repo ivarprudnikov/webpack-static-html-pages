@@ -17,6 +17,32 @@ h1, h2, h3 {
   font-weight: 300;
 }
 
+nav {
+  display: block;
+  background-color: black;
+  color: white;
+  padding: 7px;
+}
+
+nav > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav > ul > li {
+  display: block;
+}
+
+nav > ul > li > a {
+  display: block;
+  color: beige;
+  font-size: 24px;
+  padding: 10px 20px;
+}
+
 .page-title {
   font-size: 10em;
   font-weight: bold;

@@ -1,5 +1,8 @@
 body {
-  background-color: aquamarine;
+  background-color: #66ca64;
+}
+nav {
+  background-color: #c40000;
 }
 .page-title {
   color: greenyellow;
