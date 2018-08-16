@@ -27,3 +27,9 @@ assembled with webpack.
 ### Production
 
 - `npm run build` to prepare `html`, `css`, `js` files in `dist/` directory
+
+Preview deployed assets on [`gh-pages` branch](https://github.com/ivarprudnikov/webpack-static-html-pages/tree/gh-pages)
+
+## Credits
+
+- @lifenautjoe and his [webpack-starter-basic](https://github.com/lifenautjoe/webpack-starter-basic)
