@@ -16,8 +16,7 @@ module.exports = {
 
   // https://webpack.js.org/configuration/dev-server/
   devServer: {
-    port: 8080,
-    contentBase: path.join(__dirname, "dist")
+    port: 8080
   },
 
   // https://webpack.js.org/concepts/loaders/
