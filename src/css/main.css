@@ -39,8 +39,14 @@ nav > ul > li {
 nav > ul > li > a {
   display: block;
   color: beige;
-  font-size: 24px;
+  font-size: 18px;
   padding: 10px 20px;
+  font-weight: bold;
+  text-shadow: 0 -1px black;
+  text-decoration: none;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 3px;
+  background-color: rgba(0,0,0,0.1);
 }
 
 .page-title {
@@ -49,4 +55,37 @@ nav > ul > li > a {
   text-align: center;
   word-break: break-all;
   line-height: 0.85;
+}
+
+footer {
+  background: #282828;
+  color: beige;
+  flex: 1 0 auto;
+  padding-top: 20px;
+}
+
+footer a {
+  color: beige;
+}
+
+footer > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer > ul > li {
+  display: block;
+}
+
+footer > ul > li > a {
+  display: block;
+  font-size: 21px;
+  padding: 10px 20px;
+}
+
+.spacer {
+  flex: 2 1 auto;
 }
