@@ -9,7 +9,7 @@ Static html pages with Webpack 4
 This is a forkable example of static site (plain html/css/javascript) 
 assembled with webpack.
 
-Article explaining how this example was created: https://medium.com/@ivarprudnikov/static-website-multiple-html-pages-using-webpack-3bdb7accffad
+Article explaining how this example was created: https://www.ivarprudnikov.com/static-website-multiple-html-pages-using-webpack-plus-github-example/
 
 ## Build
 
