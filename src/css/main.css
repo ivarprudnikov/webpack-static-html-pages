@@ -50,11 +50,17 @@ nav > ul > li > a {
 }
 
 .page-title {
-  font-size: 10em;
+  font-size: 6em;
   font-weight: bold;
   text-align: center;
   word-break: break-all;
   line-height: 0.85;
+}
+
+.page-title > i {
+  display: block;
+  font-size: 2em;
+  margin-bottom: 0.3em;
 }
 
 footer {
