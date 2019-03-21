@@ -64,7 +64,7 @@ module.exports = {
 
   // https://webpack.js.org/concepts/plugins/
   plugins: [
-    new CleanWebpackPlugin(buildPath),
+    new CleanWebpackPlugin(), // cleans output.path by default
     new HtmlWebpackPlugin({
       template: './src/page-index/tmpl.html',
       inject: 'body',
