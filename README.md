@@ -22,9 +22,14 @@ Article explaining how this example was created: https://www.ivarprudnikov.com/s
 - `npm i` - install dependencies
 - `npm start` - start development server
 
-*Run production build*
+#### Where are generated files?
 
-- `npm run preview`
+In `development` mode `webpack` does not write generated files to disk, in order to change it 
+switch `devServer.writeToDisk` to `true` in [webpack.dev.js](./webpack.dev.js)
+
+#### Run production build
+
+- `npm run preview` 
 
 ### Production
 
