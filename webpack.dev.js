@@ -1,4 +1,4 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
 
@@ -33,8 +33,8 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          "style-loader",
-          "css-loader"
+          'style-loader',
+          'css-loader'
           // Please note we are not running postcss here
         ]
       },
@@ -52,7 +52,7 @@ module.exports = {
           }
         ]
       }
-    ],
+    ]
   },
 
   // https://webpack.js.org/concepts/plugins/
@@ -76,4 +76,4 @@ module.exports = {
       filename: 'contacts.html'
     })
   ]
-};
+}

@@ -2,7 +2,7 @@ language: node_js
 install:
 - npm i
 script:
-- npm run build
+- npm test && npm run build
 deploy:
   provider: pages
   skip-cleanup: true

@@ -3,6 +3,8 @@ Static html pages with Webpack 4
 
 [![Build Status](https://travis-ci.org/ivarprudnikov/webpack-static-html-pages.svg?branch=master)](https://travis-ci.org/ivarprudnikov/webpack-static-html-pages)
 
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
+
 [> Preview Live](https://ivarprudnikov.github.io/webpack-static-html-pages/)
 --------------------------------
 
