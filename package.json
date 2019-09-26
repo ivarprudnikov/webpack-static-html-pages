@@ -20,9 +20,9 @@
     "test": "standard"
   },
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
+    "@babel/cli": "^7.6.2",
     "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-env": "^7.6.2",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.2.0",
@@ -31,13 +31,13 @@
     "http-server": "^0.11.1",
     "mini-css-extract-plugin": "^0.8.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
-    "standard": "^14.0.2",
+    "standard": "^14.3.1",
     "style-loader": "^1.0.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "url-loader": "^2.1.0",
-    "webpack": "^4.39.2",
+    "webpack": "^4.41.0",
     "webpack-cli": "^3.3.9",
-    "webpack-dev-server": "^3.8.0"
+    "webpack-dev-server": "^3.8.1"
   },
   "standard": {
     "env": [
