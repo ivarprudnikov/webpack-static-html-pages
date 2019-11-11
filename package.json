@@ -20,7 +20,7 @@
     "test": "standard"
   },
   "devDependencies": {
-    "@babel/cli": "^7.6.4",
+    "@babel/cli": "^7.7.0",
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.7.1",
     "babel-loader": "^8.0.6",
