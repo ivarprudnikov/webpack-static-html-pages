@@ -44,6 +44,9 @@
     "webpack-dev-server": "^3.10.3"
   },
   "standard": {
+    "ignore": [
+      "cypress"
+    ],
     "env": [
       "node",
       "es6"

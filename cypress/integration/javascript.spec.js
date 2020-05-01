@@ -14,5 +14,4 @@ context('CSS', () => {
       .its('Bar')
       .should('equal', 'barfoo 1')
   })
-
 })

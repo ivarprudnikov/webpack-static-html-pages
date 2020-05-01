@@ -15,5 +15,4 @@ context('CSS', () => {
     cy.get('footer')
       .should('have.css', 'background-color', 'rgb(40, 40, 40)')
   })
-
 })
