@@ -8,5 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('DOMContentLoaded', 'page-index')
 })
 
-console.log(Foo.instance().getValue())
-console.log(Bar())
+window.Foo = Foo.instance()
+window.Bar = Bar()
+
+console.log(window.Foo.getValue())
+console.log(window.Bar)
