@@ -7,7 +7,7 @@ context('Navigation', () => {
 
   it('is homepage', () => {
     cy.get('.page-title').should('contain', 'HOME')
-    cy.location('pathname').should('be', '/')
+    cy.location('pathname').should('equal', '/')
   })
 
   it('opens home page', () => {
@@ -24,7 +24,7 @@ context('Navigation', () => {
 
   it('opens contacts page', () => {
     cy.get('body > nav > ul').contains('Contacts').click()
-    cy.location('pathname', { timeout: 10000 }).should('be', '/contacts.html')
+    cy.location('pathname', { timeout: 10000 }).should('equal', '/contacts.html')
     cy.get('.page-title').should('contain', 'CONTACTS')
   })
 

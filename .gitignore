@@ -8,3 +8,5 @@ node_modules/
 *.log
 .project
 .elasticbeanstalk/
+cypress/videos/
+cypress/screenshots/
