@@ -35,7 +35,7 @@
     "http-server": "^0.12.3",
     "mini-css-extract-plugin": "^1.1.0",
     "optimize-css-assets-webpack-plugin": "^5.0.4",
-    "standard": "^14.3.4",
+    "standard": "^16.0.2",
     "style-loader": "^2.0.0",
     "terser-webpack-plugin": "^4.2.3",
     "url-loader": "^4.1.1",
