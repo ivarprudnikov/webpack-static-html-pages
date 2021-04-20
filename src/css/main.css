@@ -1,7 +1,6 @@
 html, body {
   height: 100vh;
 }
-
 body {
   background-color: #ffffff;
   color: #2c302f;
@@ -19,7 +18,7 @@ h1, h2, h3 {
 
 nav {
   display: block;
-  background-color: black;
+  background-color: rgb(12, 11, 11);
   color: white;
   padding: 7px;
 }
