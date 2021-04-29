@@ -1,0 +1,20 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: monthly
+  open-pull-requests-limit: 10
+  labels:
+  - dependencies
+  ignore:
+  - dependency-name: cypress
+    versions:
+    - 6.4.0
+    - 6.5.0
+  - dependency-name: webpack-cli
+    versions:
+    - 4.4.0
+  - dependency-name: "@babel/preset-env"
+    versions:
+    - 7.12.11
