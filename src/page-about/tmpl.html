@@ -12,7 +12,7 @@
 </head>
 <body>
 
-  <%= require('html-loader!../partials/nav.html') %>
+  <%= require('../partials/nav.html?raw') %>
 
   <h1 class="page-title">
     <i class="fas fa-user-secret"></i>
@@ -21,9 +21,11 @@
 
   <div style="text-align: center">
     <img class="img-src-uses-require" src="<%= require('../img/unicorn.jpg') %>" width="200">
-    <%= require('html-loader!../partials/images.html') %>
+
+    <!-- uses a specific "template" resourceQuery (webpack config) which will load a file like a esModule by default, hence ".default" -->
+    <%= require('../partials/images.html?template').default %>
   </div>
 
-  <%= require('html-loader!../partials/footer.html') %>
+  <%= require('../partials/footer.html?raw') %>
 </body>
 </html>

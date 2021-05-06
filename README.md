@@ -1,4 +1,4 @@
-Static html pages with Webpack 4
+Static html pages with Webpack 5
 ================================
 
 [![Build Status](https://travis-ci.com/ivarprudnikov/webpack-static-html-pages.svg?branch=master)](https://travis-ci.com/ivarprudnikov/webpack-static-html-pages)
@@ -9,10 +9,12 @@ Static html pages with Webpack 4
 [> PREVIEW LIVE](https://ivarprudnikov.github.io/webpack-static-html-pages/)
 --------------------------------
 
-This is a forkable example of static site (plain html/css/javascript)
+This is a forkable example of a static website (plain html/css/javascript)
 assembled with webpack. You could also use this repository as a template when creating a new one.
 
 Article explaining how this example was created: https://www.ivarprudnikov.com/static-website-multiple-html-pages-using-webpack-plus-github-example/
+
+* Webpack4 implementation can still be found on a separate branch [`webpack4`](https://github.com/ivarprudnikov/webpack-static-html-pages/tree/webpack4)
 
 ## Prerequisites
 
@@ -24,11 +26,6 @@ Article explaining how this example was created: https://www.ivarprudnikov.com/s
 - `npm start` - start development server
 - `npm test` - run minimal tests (eg: lint javascript files)
 - `npm run cy:run` - run Cypress functional/browser/e2e tests. Works only when running website locally (`npm start` or `npm run preview`)
-
-### Where are generated files?
-
-In `development` mode `webpack` does not write generated files to disk, in order to change it
-switch `devServer.writeToDisk` to `true` in [webpack.dev.js](./webpack.dev.js)
 
 ## Production
 

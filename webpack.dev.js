@@ -2,6 +2,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
 
+  // https://webpack.js.org/configuration/mode/
+  mode: 'development',
+
   // This option controls if and how source maps are generated.
   // https://webpack.js.org/configuration/devtool/
   devtool: 'eval-cheap-module-source-map',
@@ -23,35 +26,35 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/i,
+        // https://webpack.js.org/loaders/babel-loader/#root
+        test: /\.m?js$/i,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        options: {
-          presets: ['@babel/preset-env']
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
         }
       },
       {
+        // https://webpack.js.org/loaders/css-loader/#root
         test: /\.css$/i,
-        use: [
-          'style-loader',
-          'css-loader'
-          // Please note we are not running postcss here
-        ]
+        use: ['style-loader', 'css-loader']
       },
       {
-        // Load all images as base64 encoding if they are smaller than 8192 bytes
+        // https://webpack.js.org/guides/asset-modules/#resource-assets
         test: /\.(png|jpe?g|gif|svg)$/i,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              // On development we want to see where the file is coming from, hence we preserve the [path]
-              name: '[path][name].[ext]?hash=[hash:20]',
-              esModule: false,
-              limit: 8192
-            }
-          }
-        ]
+        type: 'asset/resource'
+      },
+      {
+        // https://webpack.js.org/guides/asset-modules/#replacing-inline-loader-syntax
+        resourceQuery: /raw/,
+        type: 'asset/source'
+      },
+      {
+        // https://webpack.js.org/loaders/html-loader/#usage
+        resourceQuery: /template/,
+        loader: 'html-loader'
       }
     ]
   },
