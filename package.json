@@ -32,7 +32,7 @@
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.4",
     "css-minimizer-webpack-plugin": "^2.0.0",
-    "cypress": "^7.2.0",
+    "cypress": "^7.4.0",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.1",
     "http-server": "^0.12.3",
