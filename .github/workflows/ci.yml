@@ -8,12 +8,12 @@ jobs:
         uses: actions/checkout@v2.3.1
       - run: npm ci
       - run: npm test
+      - run: npm run build
       - name: Cypress run
         uses: cypress-io/github-action@v2
         env:
           CYPRESS_CRASH_REPORTS: 0
         with:
-          build: npm run build
           start: npm run start:dist
       - uses: actions/upload-artifact@master
         with:
@@ -26,6 +26,9 @@ jobs:
     steps:
       - name: Download all workflow run artifacts
         uses: actions/download-artifact@v2
+        with:
+          name: website
+      - run: ls dist
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
