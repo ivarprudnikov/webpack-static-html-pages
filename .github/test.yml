@@ -1,0 +1,19 @@
+name: Test
+on: [push]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
+      - name: Install
+        run: npm ci
+      - name: Test
+        run: npm test
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        env:
+          CYPRESS_CRASH_REPORTS: 0
+        with:
+          build: npm run build
+          start: npm run start:dist
