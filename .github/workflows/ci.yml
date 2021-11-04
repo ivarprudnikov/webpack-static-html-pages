@@ -15,22 +15,11 @@ jobs:
           CYPRESS_CRASH_REPORTS: 0
         with:
           start: npm run start:dist
-      - uses: actions/upload-artifact@master
-        with:
-          name: website
-          path: dist
-  deploy:
-    needs: tests
-    if: ${{ success() && github.ref == 'refs/heads/master' }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download all workflow run artifacts
-        uses: actions/download-artifact@v2
-        with:
-          name: website
-          path: dist
-      - run: ls dist
-      - name: Deploy 🚀
+      - name: List built files
+        if: ${{ github.ref == 'refs/heads/master' }}
+        run: ls dist
+      - name: Maybe deploy 🚀
+        if: ${{ github.ref == 'refs/heads/master' }}
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           branch: gh-pages # The branch the action should deploy to.
