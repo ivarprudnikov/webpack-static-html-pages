@@ -28,6 +28,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: website
+          path: dist
       - run: ls dist
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.5
