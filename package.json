@@ -35,7 +35,7 @@
     "cypress": "^7.2.0",
     "html-loader": "^3.0.1",
     "html-webpack-plugin": "^5.5.0",
-    "http-server": "^0.12.3",
+    "http-server": "^14.0.0",
     "mini-css-extract-plugin": "^2.4.4",
     "standard": "^16.0.4",
     "style-loader": "^3.3.1",
