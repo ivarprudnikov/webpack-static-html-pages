@@ -26,7 +26,7 @@
     "cy:run": "cypress run"
   },
   "devDependencies": {
-    "@babel/cli": "^7.17.6",
+    "@babel/cli": "^7.21.0",
     "@babel/core": "^7.17.7",
     "@babel/preset-env": "^7.16.11",
     "babel-loader": "^8.2.3",
